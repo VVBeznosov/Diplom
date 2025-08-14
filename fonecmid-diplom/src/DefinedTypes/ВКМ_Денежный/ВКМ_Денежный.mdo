@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DefinedType xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="a6208d73-cad9-4a1e-9347-a2e592208b8e">
+  <producedTypes>
+    <containerType typeId="4374cfd7-0f35-4364-9e78-1d5c0db5d67f" valueTypeId="c6edb54b-1c5d-4043-ba8c-252de497898b"/>
+  </producedTypes>
+  <name>ВКМ_Денежный</name>
+  <synonym>
+    <key>ru</key>
+    <value>Денежный</value>
+  </synonym>
+  <type>
+    <types>Number</types>
+    <numberQualifiers>
+      <precision>12</precision>
+      <scale>2</scale>
+    </numberQualifiers>
+  </type>
+</mdclass:DefinedType>
