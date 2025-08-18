@@ -10,4 +10,10 @@
   <content>DefinedType.ВКМ_Количественный</content>
   <content>DefinedType.ВКМ_Денежный</content>
   <content>Catalog.ДоговорыКонтрагентов</content>
+  <content>Document.ВКМ_ОбслуживаниеКлиента</content>
+  <content>DefinedType.ВКМ_Числовой</content>
+  <content>FilterCriterion.СвязанныеДокументы</content>
+  <content>DefinedType.ВладелецПрисоединенныхФайлов</content>
+  <content>DefinedType.ПрисоединенныйФайл</content>
+  <content>DefinedType.ПрисоединенныйФайлОбъект</content>
 </mdclass:Subsystem>
