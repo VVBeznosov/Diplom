@@ -16,4 +16,6 @@
   <content>DefinedType.ВладелецПрисоединенныхФайлов</content>
   <content>DefinedType.ПрисоединенныйФайл</content>
   <content>DefinedType.ПрисоединенныйФайлОбъект</content>
+  <content>Role.ВКМ_ДобавлениеИзменениеДокументаОбслуживание</content>
+  <content>AccumulationRegister.ВКМ_ВыполненныеКлиентуРаботы</content>
 </mdclass:Subsystem>
