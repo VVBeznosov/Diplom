@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonTemplate xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="91ef0546-5370-4093-acf0-588947f5d4d6">
+  <name>ПФ_MXL_ВКМ_АктУслуги</name>
+  <synonym>
+    <key>ru</key>
+    <value>Акт об оказанных услугах</value>
+  </synonym>
+</mdclass:CommonTemplate>
