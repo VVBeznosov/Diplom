@@ -10,30 +10,26 @@
 		</languageInfo>
 	</languageSettings>
 	<columns>
-		<size>1</size>
-		<columnsItem>
-			<index>0</index>
-			<column>
-				<formatIndex>1</formatIndex>
-			</column>
-		</columnsItem>
+		<size>0</size>
 	</columns>
 	<rowsItem>
 		<index>0</index>
+		<indexTo>15</indexTo>
 		<row>
+			<formatIndex>1</formatIndex>
 			<empty>true</empty>
 		</row>
 	</rowsItem>
 	<templateMode>true</templateMode>
 	<defaultFormatIndex>2</defaultFormatIndex>
-	<height>19</height>
-	<vgRows>19</vgRows>
+	<height>16</height>
+	<vgRows>16</vgRows>
 	<namedItem xsi:type="NamedItemCells">
 		<name>Заголовок</name>
 		<area>
 			<type>Rows</type>
 			<beginRow>0</beginRow>
-			<endRow>4</endRow>
+			<endRow>6</endRow>
 			<beginColumn>-1</beginColumn>
 			<endColumn>-1</endColumn>
 		</area>
@@ -42,8 +38,8 @@
 		<name>Подвал</name>
 		<area>
 			<type>Rows</type>
-			<beginRow>7</beginRow>
-			<endRow>18</endRow>
+			<beginRow>9</beginRow>
+			<endRow>15</endRow>
 			<beginColumn>-1</beginColumn>
 			<endColumn>-1</endColumn>
 		</area>
@@ -52,8 +48,8 @@
 		<name>СтрокаТЧ</name>
 		<area>
 			<type>Rows</type>
-			<beginRow>6</beginRow>
-			<endRow>6</endRow>
+			<beginRow>8</beginRow>
+			<endRow>8</endRow>
 			<beginColumn>-1</beginColumn>
 			<endColumn>-1</endColumn>
 		</area>
@@ -62,16 +58,17 @@
 		<name>ШапкаТЧ</name>
 		<area>
 			<type>Rows</type>
-			<beginRow>5</beginRow>
-			<endRow>5</endRow>
+			<beginRow>7</beginRow>
+			<endRow>7</endRow>
 			<beginColumn>-1</beginColumn>
 			<endColumn>-1</endColumn>
 		</area>
 	</namedItem>
 	<format>
-		<width>24</width>
+		<protection>false</protection>
 	</format>
 	<format>
 		<width>72</width>
+		<protection>false</protection>
 	</format>
 </document>

@@ -23,10 +23,11 @@
   <content>CommonForm.ВКМ_ФормаКонстант</content>
   <content>CommonModule.УправлениеПечатьюПереопределяемый</content>
   <content>Document.РеализацияТоваровУслуг</content>
-  <content>CommonTemplate.ПФ_MXL_ВКМ_АктУслуги</content>
   <content>Constant.ВКМ_ТелеБотТокен</content>
   <content>Constant.ВКМ_ИДГруппы</content>
   <content>CommonModule.ВКМ_ТелеграмБот</content>
   <content>Catalog.ВКМ_УведомленияТелеБоту</content>
   <content>ScheduledJob.ВКМ_ОтправитьВТелеграм</content>
+  <content>CommonTemplate.ПФ_MXL_ВКМ_АктУслуги</content>
+  <content>DataProcessor.ВКМ_МассовоеСозданиеАктов</content>
 </mdclass:Subsystem>
