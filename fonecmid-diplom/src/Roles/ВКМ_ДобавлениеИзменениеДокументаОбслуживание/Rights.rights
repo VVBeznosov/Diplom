@@ -136,6 +136,14 @@
 			<value>true</value>
 		</right>
 		<right>
+			<name>MobileClient</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>ExternalConnection</name>
+			<value>true</value>
+		</right>
+		<right>
 			<name>MainWindowModeNormal</name>
 			<value>true</value>
 		</right>
@@ -157,10 +165,6 @@
 		</right>
 		<right>
 			<name>AnalyticsSystemClient</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>SaveUserData</name>
 			<value>true</value>
 		</right>
 	</object>

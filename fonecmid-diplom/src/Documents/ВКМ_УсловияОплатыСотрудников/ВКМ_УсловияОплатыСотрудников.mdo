@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="0d8861fc-f99d-4ec3-b8c7-b76d2b4801b1">
+  <producedTypes>
+    <objectType typeId="54718f03-158e-4919-b1c0-f16182ba1343" valueTypeId="6a1ef4d2-48fb-4b04-a2f9-135c775ee928"/>
+    <refType typeId="a898f03e-126d-463a-bfac-7ffc81d3e7dd" valueTypeId="6fb98a37-24a5-46c8-b62e-2e534485bcad"/>
+    <selectionType typeId="f8223f35-88bc-4bfa-8808-d1d9e3158430" valueTypeId="c3906718-6729-4c30-ba8e-e52dbba517e3"/>
+    <listType typeId="b1faab20-7fac-414d-aafa-d51c68712186" valueTypeId="77818c83-8508-4a74-a494-f7312a2018ac"/>
+    <managerType typeId="701d1b1a-0aed-4ec5-b26c-8a5d6f103245" valueTypeId="4c2011e7-6524-42c6-ac92-f71774acbbdf"/>
+  </producedTypes>
+  <name>ВКМ_УсловияОплатыСотрудников</name>
+  <synonym>
+    <key>ru</key>
+    <value>Условия оплаты сотрудников</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Document.ВКМ_УсловияОплатыСотрудников.StandardAttribute.Number</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <objectPresentation>
+    <key>ru</key>
+    <value>Условие оплаты</value>
+  </objectPresentation>
+  <numberType>String</numberType>
+  <numberLength>9</numberLength>
+  <numberAllowedLength>Variable</numberAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <registerRecords>InformationRegister.ВКМ_УсловияОплатыСотрудников</registerRecords>
+  <postInPrivilegedMode>true</postInPrivilegedMode>
+  <unpostInPrivilegedMode>true</unpostInPrivilegedMode>
+  <tabularSections uuid="378cecfc-cee1-462b-8c33-377769a3a04c">
+    <producedTypes>
+      <objectType typeId="1fac9def-3311-416a-b49d-b27efe933b79" valueTypeId="753fb069-1881-402b-9b0f-697737bfa690"/>
+      <rowType typeId="a68d5c6e-e737-4090-bec1-c986fbae9d7a" valueTypeId="e1e91ae7-9b08-44f4-83b7-f8189734cd40"/>
+    </producedTypes>
+    <name>УсловияОплаты</name>
+    <synonym>
+      <key>ru</key>
+      <value>Условия оплаты</value>
+    </synonym>
+    <attributes uuid="9cce936a-2985-40bb-9e87-cd4989db510e">
+      <name>Сотрудник</name>
+      <synonym>
+        <key>ru</key>
+        <value>Сотрудник</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Пользователи</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="7e3c2f75-fedf-4aba-9a1f-571c79f3f1b0">
+      <name>Оклад</name>
+      <synonym>
+        <key>ru</key>
+        <value>Оклад</value>
+      </synonym>
+      <type>
+        <types>DefinedType.ВКМ_Денежный</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="97d0f5c5-3d96-4eaa-ab6b-de82f22ffb1a">
+      <name>ПроцентОтРабот</name>
+      <synonym>
+        <key>ru</key>
+        <value>Процент от работ</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>2</precision>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:StringValue">
+        <value>0</value>
+      </minValue>
+      <maxValue xsi:type="core:StringValue">
+        <value>99</value>
+      </maxValue>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+</mdclass:Document>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CalculationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="76f7f8a4-f1fc-4ce3-ab2a-4b9e3e89336a">
+  <producedTypes>
+    <selectionType typeId="bbcc2acc-3f06-4e3a-8084-a71b348aa32a" valueTypeId="13ca44be-2910-4a65-afa2-d006deec2c8b"/>
+    <listType typeId="8b7a0227-50fb-4a97-874a-fb7a6c0617d9" valueTypeId="f211e35e-07ed-417d-a83a-dfdb4d3f2870"/>
+    <managerType typeId="40e831d0-af2a-4815-a862-f9252c8b5287" valueTypeId="03df99ee-8294-4d75-9f85-df4fa0a4cf86"/>
+    <recordSetType typeId="a9ce4d30-c480-4323-9942-ce03e6e12bfe" valueTypeId="748698ad-a33c-4a38-ac31-1a607113d588"/>
+    <recordKeyType typeId="00c908a8-45a2-40a9-9568-7cc70e4630fc" valueTypeId="92401bb5-2b6e-4411-8900-5253eb3ab845"/>
+    <recordType typeId="28fce496-60fe-4b70-9b9b-080e38edf674" valueTypeId="30f99ed1-e092-4264-9352-69e36db5f73a"/>
+    <recalcsType typeId="dfa999a5-a42c-47ac-8196-3aeb03d1f3b3" valueTypeId="b2bb8944-5af4-4cfd-a492-bc05effb0ee3"/>
+  </producedTypes>
+  <name>ВКМ_ОсновныеНачисления</name>
+  <synonym>
+    <key>ru</key>
+    <value>Основные начисления</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <periodicity>Month</periodicity>
+  <chartOfCalculationTypes>ChartOfCalculationTypes.ВКМ_ОсновныеНачисления</chartOfCalculationTypes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="96f5ce3c-e13c-4afc-ad9a-6a58f718c556">
+    <name>Результат</name>
+    <synonym>
+      <key>ru</key>
+      <value>Результат</value>
+    </synonym>
+    <type>
+      <types>DefinedType.ВКМ_Денежный</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <dimensions uuid="c1dd9db8-4c25-4049-9089-e03ba5d4c484">
+    <name>Сотрудник</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сотрудник</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </dimensions>
+  <dimensions uuid="4d944d88-4d52-4890-ac05-5c042aa02dd8">
+    <name>Категория</name>
+    <synonym>
+      <key>ru</key>
+      <value>Категория</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ВКМ_КатегорииСотрудников</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </dimensions>
+</mdclass:CalculationRegister>

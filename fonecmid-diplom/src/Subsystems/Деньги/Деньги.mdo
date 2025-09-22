@@ -15,4 +15,9 @@
   <content>Document.ОплатаПоставщику</content>
   <content>Report.ЗадолженностьПокупателей</content>
   <content>Report.ЗадолженностьПоставщикам</content>
+  <content>Document.ВКМ_УсловияОплатыСотрудников</content>
+  <content>Document.ВКМ_НачислениеФиксированныхПремий</content>
+  <content>Document.ВКМ_НачислениеЗаработнойПлаты</content>
+  <content>CommandGroup.ВКМ_ЗарплатаСотрудников</content>
+  <content>Document.ВКМ_ГрафикОтпусков</content>
 </mdclass:Subsystem>

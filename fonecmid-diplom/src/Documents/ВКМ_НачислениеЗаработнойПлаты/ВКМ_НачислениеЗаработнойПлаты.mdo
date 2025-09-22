@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="4faa81e0-84ee-4ae5-998a-360139cd31ad">
+  <producedTypes>
+    <objectType typeId="283aea9f-c8be-457a-8405-cd330bfdbff7" valueTypeId="0f4a9113-6998-4aba-b1bd-4d58ccf3f06c"/>
+    <refType typeId="b4a21a29-844b-4abe-8cdd-874566aefc1a" valueTypeId="0454e0e6-575f-4944-a132-c71ef5b614d9"/>
+    <selectionType typeId="c49186f2-7c4f-4bf0-a451-d07d576cc337" valueTypeId="fe2c41a9-ce3d-4015-9eec-862d131d645c"/>
+    <listType typeId="32b16463-b548-4282-9ad8-d122267e02e5" valueTypeId="88d1a758-fdf5-4b21-99be-6dfa8579534e"/>
+    <managerType typeId="1ef8333d-edc5-4e2a-8d19-86ec5ce170d4" valueTypeId="a06170a9-d564-417a-916b-aae2c632a45d"/>
+  </producedTypes>
+  <name>ВКМ_НачислениеЗаработнойПлаты</name>
+  <synonym>
+    <key>ru</key>
+    <value>Начисление заработной платы</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Document.ВКМ_НачислениеЗаработнойПлаты.StandardAttribute.Number</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <objectPresentation>
+    <key>ru</key>
+    <value>Начисление заработной платы</value>
+  </objectPresentation>
+  <numberType>String</numberType>
+  <numberLength>9</numberLength>
+  <numberAllowedLength>Variable</numberAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultObjectForm>Document.ВКМ_НачислениеЗаработнойПлаты.Form.ФормаДокумента</defaultObjectForm>
+  <registerRecords>CalculationRegister.ВКМ_ОсновныеНачисления</registerRecords>
+  <registerRecords>CalculationRegister.ВКМ_Удержания</registerRecords>
+  <postInPrivilegedMode>true</postInPrivilegedMode>
+  <unpostInPrivilegedMode>true</unpostInPrivilegedMode>
+  <attributes uuid="c2675267-c5c3-4f6e-ae11-95b0860fd9ed">
+    <name>Комментарий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Комментарий</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <multiLine>true</multiLine>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <forms uuid="1c0eca5f-4b8a-4f42-9033-2cd29d728a59">
+    <name>ФормаДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма документа</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <tabularSections uuid="dedca6d2-5e1c-4369-9d4e-100640d1e584">
+    <producedTypes>
+      <objectType typeId="cdd96eb1-517e-42f5-918b-03bb2e3ccfa0" valueTypeId="b08dd287-f223-4ac9-9aeb-f3195b2f51b8"/>
+      <rowType typeId="b1bfd809-6e2d-4069-bf18-cffc6fa104cd" valueTypeId="b934eac1-3cc2-4f03-ad66-4e433e292b66"/>
+    </producedTypes>
+    <name>ЗарплатаСотрудников</name>
+    <synonym>
+      <key>ru</key>
+      <value>Зарплата сотрудников</value>
+    </synonym>
+    <attributes uuid="62cc297f-2b18-4975-8b40-f3db718d93f6">
+      <name>Сотрудник</name>
+      <synonym>
+        <key>ru</key>
+        <value>Сотрудник</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Пользователи</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="51fb3557-27eb-410d-be61-a82e28887a65">
+      <name>Оклад</name>
+      <synonym>
+        <key>ru</key>
+        <value>Оклад</value>
+      </synonym>
+      <type>
+        <types>DefinedType.ВКМ_Денежный</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="421025fb-f9b4-4cbb-aa85-b710fca70f5c">
+      <name>ПроцентОтРабот</name>
+      <synonym>
+        <key>ru</key>
+        <value>Процент от работ</value>
+      </synonym>
+      <type>
+        <types>DefinedType.ВКМ_Денежный</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+</mdclass:Document>
