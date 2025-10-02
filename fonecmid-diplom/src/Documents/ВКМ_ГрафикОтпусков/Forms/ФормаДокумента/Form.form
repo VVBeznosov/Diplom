@@ -468,7 +468,7 @@
           <horizontalAlign>Left</horizontalAlign>
         </extInfo>
       </extendedTooltip>
-      <commandName>Form.Command.Команда1</commandName>
+      <commandName>Form.Command.АнализГрафиков</commandName>
       <representation>Auto</representation>
       <autoMaxWidth>true</autoMaxWidth>
       <autoMaxHeight>true</autoMaxHeight>
@@ -513,12 +513,12 @@
         <segments>Объект.ОтпускаСотрудников</segments>
       </tablePath>
       <columns>
-        <name>ДнейВего</name>
+        <name>ВсегоОтпуск</name>
         <title>
           <key>ru</key>
-          <value>Дней вего</value>
+          <value>Всего отпуск</value>
         </title>
-        <id>2</id>
+        <id>3</id>
         <valueType>
           <types>DefinedType.ВКМ_Количественный</types>
         </valueType>
@@ -532,14 +532,18 @@
     </additionalColumns>
   </attributes>
   <formCommands>
-    <name>Команда1</name>
+    <name>АнализГрафиков</name>
+    <title>
+      <key>ru</key>
+      <value>Анализ графиков</value>
+    </title>
     <id>1</id>
     <use>
       <common>true</common>
     </use>
     <action xsi:type="form:FormCommandHandlerContainer">
       <handler>
-        <name>Команда1</name>
+        <name>АнализГрафиков</name>
       </handler>
     </action>
     <currentRowUse>Auto</currentRowUse>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<mdclass:CalculationRegister xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="622ccd7d-b15a-4b74-889a-fbc8eb4f184f">
+<mdclass:CalculationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="622ccd7d-b15a-4b74-889a-fbc8eb4f184f">
   <producedTypes>
     <selectionType typeId="f74de038-20fb-47bd-90ff-fd89c2c8116a" valueTypeId="e97f6c54-bdc2-41eb-83df-12747aaa2f3b"/>
     <listType typeId="06b9c72c-68b6-4ba6-bab2-8ab33d9e12a1" valueTypeId="0f16596f-03ae-4918-b730-5f894995720d"/>
@@ -18,4 +18,30 @@
   <periodicity>Month</periodicity>
   <chartOfCalculationTypes>ChartOfCalculationTypes.ВКМ_ДополнительныеНачисления</chartOfCalculationTypes>
   <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="a556eb2a-9c84-4488-9732-e08fd9606e62">
+    <name>Результат</name>
+    <synonym>
+      <key>ru</key>
+      <value>Результат</value>
+    </synonym>
+    <type>
+      <types>DefinedType.ВКМ_Денежный</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <dimensions uuid="6e3ce643-e947-4b6a-982e-b197fc042f0b">
+    <name>Сотрудник</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сотрудник</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </dimensions>
 </mdclass:CalculationRegister>

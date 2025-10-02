@@ -47,4 +47,7 @@
   <content>CommonModule.УправлениеДоступомПереопределяемый</content>
   <content>CommonModule.ВКМ_УправлениеДоступом</content>
   <content>Document.ВКМ_ГрафикОтпусков</content>
+  <content>AccumulationRegister.ВКМ_ВзаиморасчетыССотрудниками</content>
+  <content>DataProcessor.ВКМ_ЗаполнениеГрафикаРабот</content>
+  <content>InformationRegister.ВКМ_ГрафикиРаботы</content>
 </mdclass:Subsystem>

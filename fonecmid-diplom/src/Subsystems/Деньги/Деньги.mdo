@@ -20,4 +20,6 @@
   <content>Document.ВКМ_НачислениеЗаработнойПлаты</content>
   <content>CommandGroup.ВКМ_ЗарплатаСотрудников</content>
   <content>Document.ВКМ_ГрафикОтпусков</content>
+  <content>AccumulationRegister.ВКМ_ВзаиморасчетыССотрудниками</content>
+  <content>DataProcessor.ВКМ_ЗаполнениеГрафикаРабот</content>
 </mdclass:Subsystem>
