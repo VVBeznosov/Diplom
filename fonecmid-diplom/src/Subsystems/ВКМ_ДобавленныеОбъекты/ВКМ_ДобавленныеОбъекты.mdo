@@ -50,4 +50,5 @@
   <content>AccumulationRegister.ВКМ_ВзаиморасчетыССотрудниками</content>
   <content>DataProcessor.ВКМ_ЗаполнениеГрафикаРабот</content>
   <content>InformationRegister.ВКМ_ГрафикиРаботы</content>
+  <content>Document.ВКМ_ВыплатаЗарплаты</content>
 </mdclass:Subsystem>

@@ -19,6 +19,7 @@
   <informationRegisterPeriodicity>Month</informationRegisterPeriodicity>
   <writeMode>RecorderSubordinate</writeMode>
   <dataLockControlMode>Managed</dataLockControlMode>
+  <enableTotalsSliceLast>true</enableTotalsSliceLast>
   <recordPresentation>
     <key>ru</key>
     <value>Условия оплаты сотрудников</value>
