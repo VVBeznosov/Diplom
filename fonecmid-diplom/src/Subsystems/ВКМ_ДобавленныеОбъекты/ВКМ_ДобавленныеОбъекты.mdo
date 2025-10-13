@@ -55,4 +55,8 @@
   <content>Report.ВКМ_РасчетыССотрудниками</content>
   <content>InformationRegister.ВКМ_ГрафикОтпусков</content>
   <content>Report.ВКМ_РасходЗапланированныхОтпусков</content>
+  <content>Role.ВКМ_ЗарплатаИОтпуск</content>
+  <content>Role.ВКМ_ОтчетВыработкаСпециалиста</content>
+  <content>Role.ВКМ_АнализВыставленныхАктов</content>
+  <content>Role.ВКМ_ОтчетЗарплатыОтпуска</content>
 </mdclass:Subsystem>

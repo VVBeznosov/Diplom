@@ -27,6 +27,7 @@
   <numberAllowedLength>Variable</numberAllowedLength>
   <checkUnique>true</checkUnique>
   <autonumbering>true</autonumbering>
+  <defaultObjectForm>Document.ВКМ_УсловияОплатыСотрудников.Form.ФормаДокумента</defaultObjectForm>
   <registerRecords>InformationRegister.ВКМ_УсловияОплатыСотрудников</registerRecords>
   <postInPrivilegedMode>true</postInPrivilegedMode>
   <unpostInPrivilegedMode>true</unpostInPrivilegedMode>
@@ -47,6 +48,15 @@
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>
+  <forms uuid="f83449b3-95c8-4e17-9585-a75a789d7f93">
+    <name>ФормаДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма документа</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
   <tabularSections uuid="378cecfc-cee1-462b-8c33-377769a3a04c">
     <producedTypes>
       <objectType typeId="1fac9def-3311-416a-b49d-b27efe933b79" valueTypeId="753fb069-1881-402b-9b0f-697737bfa690"/>
