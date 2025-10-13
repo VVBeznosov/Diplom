@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="b6c4bd52-45e9-4289-a566-a46cb60caca0">
+  <producedTypes>
+    <selectionType typeId="f859aee5-856b-4273-aae2-adc668f5c6bc" valueTypeId="586f593e-b5b3-458a-a3be-80b9053a8765"/>
+    <listType typeId="be234a23-8501-48bf-9c00-8ac19ca6ce3c" valueTypeId="622cfe6c-06ea-4080-97cb-81b693b85354"/>
+    <managerType typeId="ecfc8e95-c462-4684-9569-33923c600111" valueTypeId="0973d673-6a0f-433a-a652-c97f21d32ee4"/>
+    <recordSetType typeId="1ed7599b-7c87-4be7-a6c1-21a3575ce5b1" valueTypeId="7217bb60-a0ee-40cc-bc08-fa9a33610fb7"/>
+    <recordKeyType typeId="47cdb029-8e10-42fd-ae2d-568360be70af" valueTypeId="fb0690f3-ca7a-42f6-8285-818de4771259"/>
+    <recordType typeId="f49108e2-4313-4a19-896f-adc2e1e2182f" valueTypeId="f5788dbc-a9db-4de1-b3c3-5bbb5807814e"/>
+    <recordManagerType typeId="cfddb6ea-a22c-462e-8519-6a4681c16a52" valueTypeId="00ef1e90-4c78-4fdc-82a0-3822bb064868"/>
+  </producedTypes>
+  <name>ВКМ_ГрафикОтпусков</name>
+  <synonym>
+    <key>ru</key>
+    <value>График отпусков</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <recordPresentation>
+    <key>ru</key>
+    <value>График отпусков</value>
+  </recordPresentation>
+  <listPresentation>
+    <key>ru</key>
+    <value>График отпусков</value>
+  </listPresentation>
+  <resources uuid="479d3c73-3864-4cab-8884-0d18356e85b4">
+    <name>Значение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Значение</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>1</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="ca70f7be-d671-46b0-8808-7bdcf55c4751">
+    <name>Сотрудник</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сотрудник</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="f1631128-fcf1-4e33-8be8-0ef24597e02e">
+    <name>Дата</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

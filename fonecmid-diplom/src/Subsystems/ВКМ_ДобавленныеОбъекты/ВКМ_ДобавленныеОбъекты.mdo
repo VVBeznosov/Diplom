@@ -42,7 +42,6 @@
   <content>Role.ВКМ_МассовоеСозданиеДокументов</content>
   <content>Document.ВКМ_УсловияОплатыСотрудников</content>
   <content>Document.ВКМ_НачислениеФиксированныхПремий</content>
-  <content>CommandGroup.ВКМ_ЗарплатаСотрудников</content>
   <content>Document.ВКМ_НачислениеЗаработнойПлаты</content>
   <content>CommonModule.УправлениеДоступомПереопределяемый</content>
   <content>CommonModule.ВКМ_УправлениеДоступом</content>
@@ -51,4 +50,9 @@
   <content>DataProcessor.ВКМ_ЗаполнениеГрафикаРабот</content>
   <content>InformationRegister.ВКМ_ГрафикиРаботы</content>
   <content>Document.ВКМ_ВыплатаЗарплаты</content>
+  <content>Report.ВКМ_ВыработкаСпециалистов</content>
+  <content>Report.ВКМ_АнализВыставленныхАктов</content>
+  <content>Report.ВКМ_РасчетыССотрудниками</content>
+  <content>InformationRegister.ВКМ_ГрафикОтпусков</content>
+  <content>Report.ВКМ_РасходЗапланированныхОтпусков</content>
 </mdclass:Subsystem>

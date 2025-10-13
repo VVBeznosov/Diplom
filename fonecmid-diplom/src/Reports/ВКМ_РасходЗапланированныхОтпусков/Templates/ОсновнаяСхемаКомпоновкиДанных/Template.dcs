@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Сотрудник</dataPath>
+			<field>Сотрудник</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОтпускПлан</dataPath>
+			<field>ОтпускПлан</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отпуск (план)</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОтпускФакт</dataPath>
+			<field>ОтпускФакт</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отпуск (факт)</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	ВКМ_ГрафикОтпусков.Сотрудник КАК Сотрудник,
+	СУММА(ВКМ_ГрафикОтпусков.Значение) КАК ОтпускПлан
+ПОМЕСТИТЬ втПлан
+ИЗ
+	РегистрСведений.ВКМ_ГрафикОтпусков КАК ВКМ_ГрафикОтпусков
+ГДЕ
+	ВКМ_ГрафикОтпусков.Дата &lt;= &amp;Дата
+
+СГРУППИРОВАТЬ ПО
+	ВКМ_ГрафикОтпусков.Сотрудник
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВКМ_ОсновныеНачисленияДанныеГрафика.Сотрудник КАК Сотрудник,
+	СУММА(ВЫБОР
+			КОГДА ВКМ_ОсновныеНачисленияДанныеГрафика.ПериодДействияКонец &lt;= &amp;Дата
+				ТОГДА РАЗНОСТЬДАТ(ВКМ_ОсновныеНачисленияДанныеГрафика.ПериодДействияНачало, ВКМ_ОсновныеНачисленияДанныеГрафика.ПериодДействияКонец, ДЕНЬ) + 1
+			ИНАЧЕ ВЫБОР
+					КОГДА РАЗНОСТЬДАТ(ВКМ_ОсновныеНачисленияДанныеГрафика.ПериодДействияНачало, &amp;Дата, ДЕНЬ) &lt; 0
+						ТОГДА 0
+					ИНАЧЕ РАЗНОСТЬДАТ(ВКМ_ОсновныеНачисленияДанныеГрафика.ПериодДействияНачало, &amp;Дата, ДЕНЬ) + 1
+				КОНЕЦ
+		КОНЕЦ) КАК ОтпускФакт
+ПОМЕСТИТЬ втФакт
+ИЗ
+	РегистрРасчета.ВКМ_ОсновныеНачисления.ДанныеГрафика(ВидРасчета = ЗНАЧЕНИЕ(ПланВидовРасчета.ВКМ_ОсновныеНачисления.Отпускные)) КАК ВКМ_ОсновныеНачисленияДанныеГрафика
+
+СГРУППИРОВАТЬ ПО
+	ВКМ_ОсновныеНачисленияДанныеГрафика.Сотрудник
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	втПлан.Сотрудник КАК Сотрудник,
+	втПлан.ОтпускПлан КАК ОтпускПлан,
+	втФакт.ОтпускФакт КАК ОтпускФакт
+ИЗ
+	втПлан КАК втПлан
+		ЛЕВОЕ СОЕДИНЕНИЕ втФакт КАК втФакт
+		ПО (втПлан.Сотрудник = втФакт.Сотрудник)</query>
+	</dataSet>
+	<parameter>
+		<name>Дата</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Сотрудник</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ОтпускПлан</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ОтпускФакт</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Дата</dcscor:parameter>
+					<dcsset:userSettingID>cbe5ae36-4d99-4b7d-88c3-8140d39b618d</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьПараметрыДанных</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьЗаголовок</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">Output</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Заголовок</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Расход запланированных отпусков</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

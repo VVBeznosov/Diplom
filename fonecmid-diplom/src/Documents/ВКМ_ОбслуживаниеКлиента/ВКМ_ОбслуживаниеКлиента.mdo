@@ -20,11 +20,11 @@
   <fullTextSearch>Use</fullTextSearch>
   <objectPresentation>
     <key>ru</key>
-    <value>Заявка на обслуживание</value>
+    <value>Обслуживание клиента</value>
   </objectPresentation>
   <listPresentation>
     <key>ru</key>
-    <value>Заявки на обслуживание</value>
+    <value>Обслуживание клиентов</value>
   </listPresentation>
   <numberType>String</numberType>
   <numberLength>9</numberLength>

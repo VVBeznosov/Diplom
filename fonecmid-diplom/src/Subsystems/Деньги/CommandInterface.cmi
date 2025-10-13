@@ -13,6 +13,7 @@
       <commands>Document.ВКМ_НачислениеФиксированныхПремий.StandardCommand.OpenList</commands>
       <commands>Document.ВКМ_УсловияОплатыСотрудников.StandardCommand.OpenList</commands>
       <commands>Document.ВКМ_ГрафикОтпусков.StandardCommand.OpenList</commands>
+      <commands>Document.ВКМ_ВыплатаЗарплаты.StandardCommand.OpenList</commands>
     </placementFragments>
   </commandsPlacement>
   <commandsOrder>
@@ -20,6 +21,7 @@
       <group>CommandGroup.ВКМ_ЗарплатаСотрудников</group>
       <commands>Document.ВКМ_НачислениеЗаработнойПлаты.StandardCommand.OpenList</commands>
       <commands>Document.ВКМ_НачислениеФиксированныхПремий.StandardCommand.OpenList</commands>
+      <commands>Document.ВКМ_ВыплатаЗарплаты.StandardCommand.OpenList</commands>
       <commands>Document.ВКМ_УсловияОплатыСотрудников.StandardCommand.OpenList</commands>
       <commands>Document.ВКМ_ГрафикОтпусков.StandardCommand.OpenList</commands>
     </orderFragments>
