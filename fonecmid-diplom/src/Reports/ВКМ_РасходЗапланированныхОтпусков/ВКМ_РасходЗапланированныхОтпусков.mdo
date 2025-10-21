@@ -11,6 +11,10 @@
   </synonym>
   <useStandardCommands>true</useStandardCommands>
   <mainDataCompositionSchema>Report.ВКМ_РасходЗапланированныхОтпусков.Template.ОсновнаяСхемаКомпоновкиДанных</mainDataCompositionSchema>
+  <extendedPresentation>
+    <key>ru</key>
+    <value>Расход запланированных отпусков</value>
+  </extendedPresentation>
   <templates uuid="4095119a-1c82-4d98-886f-8e2a1ff1da98">
     <name>ОсновнаяСхемаКомпоновкиДанных</name>
     <synonym>

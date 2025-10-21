@@ -54,6 +54,10 @@
       <dataPath xsi:type="form:DataPath">
         <segments>Объект.Date</segments>
       </dataPath>
+      <handlers>
+        <event>OnChange</event>
+        <name>ДатаПриИзменении</name>
+      </handlers>
       <extendedTooltip>
         <name>ДатаРасширеннаяПодсказка</name>
         <id>6</id>
