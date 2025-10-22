@@ -96,7 +96,7 @@
     </items>
     <items xsi:type="form:FormField">
       <name>Номер</name>
-      <id>16</id>
+      <id>49</id>
       <visible>true</visible>
       <enabled>true</enabled>
       <userVisible>
@@ -105,10 +105,9 @@
       <dataPath xsi:type="form:DataPath">
         <segments>Список.Номер</segments>
       </dataPath>
-      <defaultItem>true</defaultItem>
       <extendedTooltip>
         <name>НомерРасширеннаяПодсказка</name>
-        <id>18</id>
+        <id>51</id>
         <type>Label</type>
         <autoMaxWidth>true</autoMaxWidth>
         <autoMaxHeight>true</autoMaxHeight>
@@ -118,22 +117,26 @@
       </extendedTooltip>
       <contextMenu>
         <name>НомерКонтекстноеМеню</name>
-        <id>17</id>
+        <id>50</id>
         <autoFill>true</autoFill>
       </contextMenu>
-      <type>LabelField</type>
+      <type>InputField</type>
       <editMode>Enter</editMode>
       <showInHeader>true</showInHeader>
       <headerHorizontalAlign>Left</headerHorizontalAlign>
       <showInFooter>true</showInFooter>
-      <extInfo xsi:type="form:LabelFieldExtInfo">
+      <extInfo xsi:type="form:InputFieldExtInfo">
         <autoMaxWidth>true</autoMaxWidth>
         <autoMaxHeight>true</autoMaxHeight>
+        <wrap>true</wrap>
+        <chooseType>true</chooseType>
+        <typeDomainEnabled>true</typeDomainEnabled>
+        <textEdit>true</textEdit>
       </extInfo>
     </items>
     <items xsi:type="form:FormField">
       <name>Дата</name>
-      <id>19</id>
+      <id>52</id>
       <visible>true</visible>
       <enabled>true</enabled>
       <userVisible>
@@ -144,7 +147,7 @@
       </dataPath>
       <extendedTooltip>
         <name>ДатаРасширеннаяПодсказка</name>
-        <id>21</id>
+        <id>54</id>
         <type>Label</type>
         <autoMaxWidth>true</autoMaxWidth>
         <autoMaxHeight>true</autoMaxHeight>
@@ -154,17 +157,21 @@
       </extendedTooltip>
       <contextMenu>
         <name>ДатаКонтекстноеМеню</name>
-        <id>20</id>
+        <id>53</id>
         <autoFill>true</autoFill>
       </contextMenu>
-      <type>LabelField</type>
+      <type>InputField</type>
       <editMode>Enter</editMode>
       <showInHeader>true</showInHeader>
       <headerHorizontalAlign>Left</headerHorizontalAlign>
       <showInFooter>true</showInFooter>
-      <extInfo xsi:type="form:LabelFieldExtInfo">
+      <extInfo xsi:type="form:InputFieldExtInfo">
         <autoMaxWidth>true</autoMaxWidth>
         <autoMaxHeight>true</autoMaxHeight>
+        <wrap>true</wrap>
+        <chooseType>true</chooseType>
+        <typeDomainEnabled>true</typeDomainEnabled>
+        <textEdit>true</textEdit>
       </extInfo>
     </items>
     <items xsi:type="form:FormField">
@@ -450,6 +457,9 @@
     <edit>
       <common>true</common>
     </edit>
+    <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
+      <segments>Список.Ссылка</segments>
+    </notDefaultUseAlwaysAttributes>
     <main>true</main>
     <extInfo xsi:type="form:DynamicListExtInfo">
       <queryText>ВЫБРАТЬ
