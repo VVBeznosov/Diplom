@@ -21,28 +21,18 @@
 			</role>
 		</field>
 		<field xsi:type="DataSetFieldField">
-			<dataPath>СуммаКОплатеОстаток</dataPath>
-			<field>СуммаКОплатеОстаток</field>
+			<dataPath>Владелец</dataPath>
+			<field>Владелец</field>
 			<title xsi:type="v8:LocalStringType">
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Работа специалистов</v8:content>
+					<v8:content>Контрагент</v8:content>
 				</v8:item>
 			</title>
 		</field>
 		<field xsi:type="DataSetFieldField">
-			<dataPath>КлиентПредставление</dataPath>
-			<field>КлиентПредставление</field>
-			<title xsi:type="v8:LocalStringType">
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Клиент</v8:content>
-				</v8:item>
-			</title>
-		</field>
-		<field xsi:type="DataSetFieldField">
-			<dataPath>ДоговорПредставление</dataPath>
-			<field>ДоговорПредставление</field>
+			<dataPath>Представление</dataPath>
+			<field>Представление</field>
 			<title xsi:type="v8:LocalStringType">
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -51,40 +41,108 @@
 			</title>
 		</field>
 		<field xsi:type="DataSetFieldField">
-			<dataPath>ДоговорВКМ_Абонплата</dataPath>
-			<field>ДоговорВКМ_Абонплата</field>
+			<dataPath>ВКМ_Абонплата</dataPath>
+			<field>ВКМ_Абонплата</field>
 			<title xsi:type="v8:LocalStringType">
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Абонентская плата</v8:content>
+					<v8:content>Абонплата</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаКОплате</dataPath>
+			<field>СуммаКОплате</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма к оплате</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаВыставленная</dataPath>
+			<field>СуммаВыставленная</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма выставленная</v8:content>
 				</v8:item>
 			</title>
 		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ
-	ВКМ_ВыполненныеКлиентуРаботыОстатки.Клиент.Представление,
-	ВКМ_ВыполненныеКлиентуРаботыОстатки.Договор.Представление,
-	ВКМ_ВыполненныеКлиентуРаботыОстатки.Договор.ВКМ_Абонплата,
-	ВКМ_ВыполненныеКлиентуРаботыОстатки.СуммаКОплатеОстаток
+	РеализацияТоваровУслугУслуги.Ссылка.Контрагент КАК Контрагент,
+	РеализацияТоваровУслугУслуги.Сумма КАК Сумма
+ПОМЕСТИТЬ втВыставлено
 ИЗ
-	РегистрНакопления.ВКМ_ВыполненныеКлиентуРаботы.Остатки(&amp;Период,) КАК ВКМ_ВыполненныеКлиентуРаботыОстатки</query>
+	Документ.РеализацияТоваровУслуг.Услуги КАК РеализацияТоваровУслугУслуги
+ГДЕ
+	РеализацияТоваровУслугУслуги.Номенклатура В
+		(ВЫБРАТЬ
+			Константы.ВКМ_НоменклатураРаботыСпециалиста КАК ВКМ_НоменклатураРаботыСпециалиста
+		ИЗ
+			Константы КАК Константы)
+	И МЕСЯЦ(РеализацияТоваровУслугУслуги.Ссылка.Дата) = МЕСЯЦ(&amp;Период)
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ДоговорыКонтрагентов.Владелец КАК Владелец,
+	ДоговорыКонтрагентов.Представление КАК Представление,
+	ДоговорыКонтрагентов.ВКМ_Абонплата КАК ВКМ_Абонплата,
+	ВКМ_ВыполненныеКлиентуРаботыОбороты.СуммаКОплатеПриход КАК СуммаКОплате,
+	втВыставлено.Сумма КАК СуммаВыставленная
+ИЗ
+	Справочник.ДоговорыКонтрагентов КАК ДоговорыКонтрагентов
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрНакопления.ВКМ_ВыполненныеКлиентуРаботы.Обороты(НАЧАЛОПЕРИОДА(&amp;Период, МЕСЯЦ),
+			КОНЕЦПЕРИОДА(&amp;Период, МЕСЯЦ),,) КАК ВКМ_ВыполненныеКлиентуРаботыОбороты
+		ПО ДоговорыКонтрагентов.Владелец = ВКМ_ВыполненныеКлиентуРаботыОбороты.Клиент
+		ЛЕВОЕ СОЕДИНЕНИЕ втВыставлено КАК втВыставлено
+		ПО ДоговорыКонтрагентов.Владелец = втВыставлено.Контрагент
+ГДЕ
+	ДоговорыКонтрагентов.ВидДоговора = ЗНАЧЕНИЕ(Перечисление.ВидыДоговоровКонтрагентов.ВКМ_АбоненскоеОбслуживание)
+	И ДоговорыКонтрагентов.ВКМ_НачалоДоговора &lt;= &amp;Период
+	И ДоговорыКонтрагентов.ВКМ_КонецДоговора &gt;= &amp;Период</query>
 	</dataSet>
-	<calculatedField>
-		<dataPath>Итого</dataPath>
-		<expression>ДоговорВКМ_Абонплата + СуммаКОплатеОстаток</expression>
-		<title xsi:type="v8:LocalStringType">
-			<v8:item>
-				<v8:lang>ru</v8:lang>
-				<v8:content>ИТОГО</v8:content>
-			</v8:item>
-		</title>
-	</calculatedField>
 	<parameter>
 		<name>Период</name>
 		<title xsi:type="v8:LocalStringType">
 			<v8:item>
 				<v8:lang>ru</v8:lang>
 				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>НачалоПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>КонецПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Конец периода</v8:content>
 			</v8:item>
 		</title>
 		<valueType>
@@ -106,19 +164,19 @@
 		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
 			<dcsset:selection>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>КлиентПредставление</dcsset:field>
+					<dcsset:field>Владелец</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>ДоговорПредставление</dcsset:field>
+					<dcsset:field>Представление</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>ДоговорВКМ_Абонплата</dcsset:field>
+					<dcsset:field>ВКМ_Абонплата</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>СуммаКОплатеОстаток</dcsset:field>
+					<dcsset:field>СуммаКОплате</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>Итого</dcsset:field>
+					<dcsset:field>СуммаВыставленная</dcsset:field>
 				</dcsset:item>
 			</dcsset:selection>
 			<dcsset:dataParameters>

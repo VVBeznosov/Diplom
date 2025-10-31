@@ -104,7 +104,7 @@
       <type>
         <types>Number</types>
         <numberQualifiers>
-          <precision>2</precision>
+          <precision>3</precision>
           <nonNegative>true</nonNegative>
         </numberQualifiers>
       </type>
@@ -112,7 +112,7 @@
         <value>0</value>
       </minValue>
       <maxValue xsi:type="core:StringValue">
-        <value>99</value>
+        <value>100</value>
       </maxValue>
       <dataHistory>Use</dataHistory>
       <fullTextSearch>Use</fullTextSearch>

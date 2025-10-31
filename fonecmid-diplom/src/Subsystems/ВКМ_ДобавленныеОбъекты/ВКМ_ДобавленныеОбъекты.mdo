@@ -59,4 +59,6 @@
   <content>Role.ВКМ_ОтчетВыработкаСпециалиста</content>
   <content>Role.ВКМ_АнализВыставленныхАктов</content>
   <content>Role.ВКМ_ОтчетЗарплатыОтпуска</content>
+  <content>Role.ВКМ_ПроведениеИзменениеДокументаОбслуживание</content>
+  <content>AccumulationRegister.ВКМ_ОбслуживаниеКлиентов</content>
 </mdclass:Subsystem>
