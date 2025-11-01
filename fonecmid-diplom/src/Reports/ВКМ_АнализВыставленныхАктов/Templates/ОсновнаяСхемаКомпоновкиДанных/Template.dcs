@@ -120,6 +120,8 @@
 			</v8:DateQualifiers>
 		</valueType>
 		<useRestriction>false</useRestriction>
+		<denyIncompleteValues>true</denyIncompleteValues>
+		<use>Always</use>
 	</parameter>
 	<parameter>
 		<name>НачалоПериода</name>
@@ -152,6 +154,7 @@
 			</v8:DateQualifiers>
 		</valueType>
 		<useRestriction>false</useRestriction>
+		<availableAsField>false</availableAsField>
 	</parameter>
 	<settingsVariant>
 		<dcsset:name>Основной</dcsset:name>

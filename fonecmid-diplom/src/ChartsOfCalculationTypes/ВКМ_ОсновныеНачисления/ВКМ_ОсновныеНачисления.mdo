@@ -57,6 +57,7 @@
       </code>
       <base>ChartOfCalculationTypes.ВКМ_ОсновныеНачисления.Оклад</base>
       <base>ChartOfCalculationTypes.ВКМ_ДополнительныеНачисления.Премия</base>
+      <base>ChartOfCalculationTypes.ВКМ_ОсновныеНачисления.Процент</base>
     </items>
     <items id="f5c8c1f7-e54f-4a7d-8a2e-0ec5186030af">
       <name>Процент</name>

@@ -89,6 +89,7 @@
 			</v8:DateQualifiers>
 		</valueType>
 		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
 	</parameter>
 	<parameter>
 		<name>НачалоПериода</name>
@@ -106,6 +107,7 @@
 		</valueType>
 		<useRestriction>false</useRestriction>
 		<expression>&amp;Период.НачалоПериода</expression>
+		<availableAsField>false</availableAsField>
 	</parameter>
 	<parameter>
 		<name>КонецПериода</name>
@@ -123,6 +125,7 @@
 		</valueType>
 		<useRestriction>false</useRestriction>
 		<expression>&amp;Период.ДатаОкончания</expression>
+		<availableAsField>false</availableAsField>
 	</parameter>
 	<parameter>
 		<name>Конец</name>
@@ -139,6 +142,7 @@
 			</v8:DateQualifiers>
 		</valueType>
 		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
 	</parameter>
 	<parameter>
 		<name>Период</name>
@@ -153,6 +157,8 @@
 		</valueType>
 		<value xsi:nil="true"/>
 		<useRestriction>false</useRestriction>
+		<denyIncompleteValues>true</denyIncompleteValues>
+		<use>Always</use>
 	</parameter>
 	<settingsVariant>
 		<dcsset:name>Основной</dcsset:name>
